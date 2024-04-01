@@ -1,4 +1,4 @@
-{% set version = '1.6' %}
+{% set version = "1.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SCCS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SCCS/SCCS_{{ version }}.tar.gz
-  sha256: 9b34c7aab0f68e968737834f01f81cbd42e876d2d4e7feeaba8bbceb963ae30c
+  sha256: 745b9c872c3e8feb1b9f94b1168b7bfb005c0d8be459a4be1573f25b02efa733
 
 build:
-  merge_build_host: True           # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -47,13 +47,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=SCCS
   license: GPL-2.0-or-later
-  summary: 'Various self-controlled case series models used to investigate associations between
-    time-varying exposures such as vaccines or other drugs or non drug exposures and
-    an adverse event can be fitted. Detailed information on the self-controlled case
-    series method and its extensions with more examples can be found in Farrington,
-    P., Whitaker, H., and Ghebremichael Weldeselassie, Y. (2018, ISBN: 978-1-4987-8159-6.
-    Self-controlled Case Series studies: A modelling Guide with R. Boca Raton: Chapman
-    & Hall/CRC Press) and <https://sccs-studies.info/index.html>.'
+  summary: 'Various self-controlled case series models used to investigate associations between time-varying exposures such as vaccines or other drugs or non drug exposures and an adverse event can be fitted. Detailed information on the self-controlled case series method and its extensions with more examples can be found
+    in Farrington, P., Whitaker, H., and Ghebremichael Weldeselassie, Y. (2018, ISBN: 978-1-4987-8159-6. Self-controlled Case Series studies: A modelling Guide with R. Boca Raton: Chapman & Hall/CRC Press) and <https://sccs-studies.info/index.html>.'
   license_family: GPL2
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
