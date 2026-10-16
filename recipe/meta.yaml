@@ -1,4 +1,4 @@
-{% set version = "1.7" %}
+{% set version = "1.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SCCS_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SCCS/SCCS_{{ version }}.tar.gz
-  sha256: 745b9c872c3e8feb1b9f94b1168b7bfb005c0d8be459a4be1573f25b02efa733
+  sha256: 162adc4530d6f27b12aff46b3b5a3d8a6e7b75c740da3701a61fa419a0cbd9de
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
